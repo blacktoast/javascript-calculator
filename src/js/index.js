@@ -1,6 +1,11 @@
-const $ = (e) => document.querySelector(e);
+import { putNumber } from "./putNumber/putNumber.js";
+import { $ } from "./utils/Dom.js";
 
-let $digits = $(".digits");
+function initEvent() {}
 
-console.log($digits.children["0"]);
-console.log("te");
+function init() {
+  let $digits = $(".digits");
+  $digits.addEventListener("click", putNumber);
+}
+
+init();
