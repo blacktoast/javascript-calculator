@@ -10,4 +10,12 @@ describe("간단 계산기 앱 테스트", () => {
   it("test", () => {
     cy.get("#total").should("have.text", "0");
   });
+  it("클릭 숫자 테스트", () => {
+    cy.get("#total").then((result) => {
+      let num = result.text();
+
+      cy.get(".digits").contains("1").click();
+      cy.get("#total").should("have.text", "1");
+    });
+  });
 });
