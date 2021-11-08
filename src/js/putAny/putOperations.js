@@ -1,9 +1,6 @@
 import { OPERATIONS } from "../utils/common.js";
-import { DISPLAY } from "../utils/Dom.js";
-
-function calculate() {
-  console.log("lets calculate");
-}
+import { DISPLAY, reRenderDisplay } from "../utils/Dom.js";
+import { calculate } from "./excuteCal.js";
 
 function checkDisplay() {
   if (checkOperation()) return true;
@@ -33,7 +30,8 @@ export function putOperations({ target }) {
   let putOperation = target.innerText;
   if (!checkDisplay()) {
     if (putOperation === "=") {
-      calculate();
+      reRenderDisplay(calculate(DISPLAY.innerText));
+      return;
     }
     console.log(putOperation);
     DISPLAY.innerText += putOperation;
