@@ -8,16 +8,19 @@ import {
 function handleCalculate(nums, operation) {
   switch (operation) {
     case "+":
-      return nums[0] + nums[1];
+      return String(Number(nums[0]) + Number(nums[1]));
       break;
     case "-":
-      return nums[0] - nums[1];
+      return String(Number(nums[0]) + Number(nums[1]));
+      break;
       break;
     case "X":
-      return nums[0] * nums[1];
+      return String(Number(nums[0]) + Number(nums[1]));
+      break;
       break;
     case "/":
-      return nums[0] % nums[1];
+      return String(Number(nums[0]) + Number(nums[1]));
+      break;
       break;
   }
 }
