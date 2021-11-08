@@ -18,4 +18,10 @@ describe("간단 계산기 앱 테스트", () => {
       cy.get("#total").should("have.text", "1");
     });
   });
+  it("test calculate", () => {
+    cy.get("[data-num=1]").click();
+    cy.get(".operations").contains("+").click();
+    cy.get("[data-num=2]").click();
+    cy.get(".operations").contains("=").click();
+  });
 });
