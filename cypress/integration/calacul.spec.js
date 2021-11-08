@@ -6,9 +6,9 @@ describe("간단 계산기 앱 테스트", () => {
     // we include it in our beforeEach function so that it runs before each test
     cy.visit("http://132.226.18.9:5500");
   });
-
   it("test", () => {
     cy.get("#total").should("have.text", "0");
+    cy.get(".digits").find("[data-num=1]");
   });
   it("클릭 숫자 테스트", () => {
     cy.get("#total").then((result) => {
