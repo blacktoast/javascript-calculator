@@ -15,7 +15,10 @@ function checkInputLength() {
 }
 
 export function putNumber({ target }) {
-  let puttedNum = target.innerText;
+  if (!target.dataset.num) return;
+  let puttedNum = target.dataset.num;
+  console.log(target.dataset.num);
+
   if (checkInputLength()) {
     if (DISPLAY.innerText === "0") {
       DISPLAY.innerText = puttedNum;

@@ -9,6 +9,7 @@ function init() {
   let $digits = $(".digits");
   let $operations = $(".operations");
   let $modifiers = $(".modifiers");
+
   $digits.addEventListener("click", putNumber);
   $operations.addEventListener("click", putOperations);
   $modifiers.addEventListener("click", allClear);
