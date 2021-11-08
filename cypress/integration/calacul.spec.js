@@ -24,4 +24,13 @@ describe("간단 계산기 앱 테스트", () => {
     cy.get("[data-num=2]").click();
     cy.get(".operations").contains("=").click();
   });
+
+  it("3자리 이상 숫자 입력시 alert창 ", () => {
+    for (let i = 0; i < 5; i++) {
+      cy.get("[data-num=1]").click();
+    }
+    cy.on("window:alert", (text) => {
+      expect(text).to.contains("세자리 초과 숫자는 입력할수없습니다");
+    });
+  });
 });
