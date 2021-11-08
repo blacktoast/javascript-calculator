@@ -1,4 +1,4 @@
-import { operations } from "../utils/common.js";
+import { OPERATIONS } from "../utils/common.js";
 import { DISPLAY } from "../utils/Dom.js";
 
 function calculate() {
@@ -22,8 +22,8 @@ function checkEmpty() {
 function checkOperation() {
   let nums = DISPLAY.innerText;
   let l = nums.length;
-  console.log(operations.includes(nums[l - 1]));
-  if (operations.includes(nums[l - 1])) {
+  console.log(OPERATIONS.includes(nums[l - 1]));
+  if (OPERATIONS.includes(nums[l - 1])) {
     alert("계산기호 뒤에는 계산기호를 입력할수없습니다");
     return true;
   }

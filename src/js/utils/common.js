@@ -1,1 +1,1 @@
-export const operations = ["+", "-", "X", "/"];
+export const OPERATIONS = ["+", "-", "X", "/"];
